@@ -1,0 +1,23 @@
+{
+  "name": "commander",
+  "version": "0.0.1",
+  "description": "A simple IRC bot for my personal use.",
+  "main": "commander.coffee",
+  "dependencies": {
+    "github": "~0.1.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrhmouse/commander.git"
+  },
+  "author": "Jordan Brown",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mrhmouse/commander/issues"
+  },
+	"private": true
+}

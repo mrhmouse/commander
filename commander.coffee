@@ -59,6 +59,9 @@ class Commander extends EventEmitter
 	say: ( message ) =>
 		@_client.say @channel, message
 
+	tell: ( user, message ) =>
+		@_client.say user, message
+
 	load: ( filenames ) =>
 		for filename in filenames
 			key = path.join __dirname, MODULE_DIR, filename + '.coffee'
