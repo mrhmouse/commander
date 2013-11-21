@@ -4,7 +4,8 @@
   "description": "A simple IRC bot for my personal use.",
   "main": "commander.coffee",
   "dependencies": {
-    "github": "~0.1.12"
+    "github": "~0.1.12",
+		"irc": ">=0.3.6"
   },
   "devDependencies": {},
   "scripts": {
