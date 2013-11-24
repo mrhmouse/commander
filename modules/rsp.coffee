@@ -57,7 +57,7 @@ rsp =
 
 actions = ( k for own k, v of rsp )
 
-module.exports = ( action, args... ) ->
+module.exports = ( from, action, args... ) ->
 	unless action in actions
 		@say "Invalid action '#{ action }'."
 		return

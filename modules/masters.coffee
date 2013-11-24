@@ -1,4 +1,4 @@
-module.exports = ( action, users... ) ->
+module.exports = ( from, action, users... ) ->
 	unless users?.length
 		@say 'Usage: masters [add | remove] <users...>'
 		@say '       masters list'

@@ -1,7 +1,7 @@
 path = require 'path'
 hooks = {}
 
-module.exports = ( action, args... ) ->
+module.exports = ( from, action, args... ) ->
 	if 'init' is action
 		for m in args
 			key = path.join __dirname, 'hooks', m + '.coffee'

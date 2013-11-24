@@ -1,4 +1,4 @@
-module.exports = ( times ) ->
+module.exports = ( from, times ) ->
 	num = +times
 	if isNaN num
 		@say 'Quack!'

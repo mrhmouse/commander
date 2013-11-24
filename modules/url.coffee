@@ -2,7 +2,7 @@ fs = require 'fs'
 http = require 'http'
 https = require 'https'
 
-module.exports = ( name, url ) ->
+module.exports = ( from, name, url ) ->
 	unless url? and name?
 		@say 'You must provide a name and a URL...'
 		return

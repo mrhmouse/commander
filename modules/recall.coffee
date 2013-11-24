@@ -2,7 +2,7 @@ path = require 'path'
 fs = require 'fs'
 file = path.join __dirname, 'modules.json'
 
-module.exports = ( action ) ->
+module.exports = ( from, action ) ->
 	switch action
 		when 'save'
 			modules = ( name for name, value of @commands )

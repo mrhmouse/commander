@@ -1,4 +1,4 @@
-module.exports = ( user ) ->
+module.exports = ( from, user ) ->
 	unless user?
 		@say "Usage: view-permissions <user>"
 		return

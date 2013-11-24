@@ -9,10 +9,13 @@ class Commander extends EventEmitter
 		@server ?= 'localhost'
 		@commands = {}
 		@permissions = {}
+		@names = []
 		@_client = new irc.Client @server, @name,
 			channels: [@channel]
 			userName: @name
 			realName: @name
+
+		@_client.on 'names', ( channel, names ) => @names = names
 
 		@_client.on 'message', ( from, to, text ) =>
 			return unless 0 is text.indexOf @prefix
@@ -30,7 +33,7 @@ class Commander extends EventEmitter
 						return
 
 				try
-					@commands[op].apply @, args
+					@commands[op].call @, from, args...
 				catch e
 					console.log e
 					@say "Command '#{ op }' had an error..."

@@ -1,7 +1,7 @@
 https = require 'https'
 qs = require 'querystring'
 
-module.exports = ( word ) ->
+module.exports = ( from, word ) ->
 	path = 'https://duckduckgo.com/?' + qs.stringify q: word, format: 'json'
 	https.get path, ( res ) =>
 		data = new Buffer 0
