@@ -5,7 +5,7 @@ saw = ( name ) -> times[name] = new Date
 seen = ( name ) -> times[name]
 hooked = no
 
-module.exports = ( name ) ->
+module.exports = ( from, name ) ->
 	unless hooked
 		hooked = yes
 		@_client.on 'join', ( channel, nick ) -> saw nick
@@ -16,4 +16,4 @@ module.exports = ( name ) ->
 	@say if last?
 		"I last saw #{ name } about #{ elapsedSince last } ago."
 	else
-		 "I haven't seen #{ name }, sorry."
+		 "I haven't seen #{ name }. Sorry, #{ from }."
