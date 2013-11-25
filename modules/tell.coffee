@@ -36,6 +36,7 @@ module.exports = ( from, name, message... ) ->
 	unless hooked
 		hooked = yes
 		@_client.on 'join', ( channel, nick ) =>
+			return unless messages[nick]?.length
 			for m in messages[nick]
 				@say "#{ nick }: Message from #{ m.from } " +
 				"about #{ elapsedSince m.time } ago: #{ m.message }"
